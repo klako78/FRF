@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado</title>
+    
+   
+  
+  
+</head>
+<header style="background:url(..img/banne_luis_enrique.jpg) no-repeat center center fixed;
+background-size:cover;
+height:100px;
+width: 100%;"></header>
+<body>
+    
+    
+    
+    
+    <div style="margin-top: 100px;">
+        <h2 style="text-align:center; font-size: 16px; margin-top: 250px;">CONCURSO ACORDEON AFICIONADO</h2>
+        <h3 style="text-align:center; font-size: 16px;">Agosto 25 al 28 de 2022</h3>
+       
+        <p style="margin-bottom: 5px; text-align: justify; font-size: 16px;"> En Fonseca, Guajira, a los {% now "d" %} días del mes de Agosto de 2022, siendo las
+{% now "h:m" %} PM, se reunieron los miembros del Jurado Calificador del Concurso
+de ACORDEON AFICIONADO en la tarima TIERRA DE CANTORES de la Plaza
+Principal de este Municipio, para calificar y dar a conocer los nombres de los
+concursantes que pasan a la Tercera Ronda en esta modalidad.
+        </p>
+        <table style=" width: 75%; margin: auto; margin-top: 20px; margin-bottom: 20px; padding-bottom: 10px;">
+            
+             <thead>
+                 <tr>
+                    
+                     <th style="border-top: 1px solid black; border-bottom: 1PX solid black; 
+                     border-left: 1px solid black;
+                     border-right: 1px solid black;
+                     color: black;
+                     padding: 3px 3px;
+                     font-size: 16px;
+                     text-align: center;">No</th>
+                     <th style="border-top: 1px solid black; border-bottom: 1PX solid black; 
+                     border-left: 1px solid black;
+                     border-right: 1px solid black;
+                     color: black;
+                     padding: 3px 3px;
+                     font-size: 16px;
+                     text-align: center;">NOMBRE</th>
+                     
+                     
+     
+                 </tr>
+             </thead>
+             <tbody>
+                 {% for i in suscriptor %}
+                 <tr>
+                    
+                     <td style=" border-bottom: 1PX solid black;
+                     border-left: 1px solid black;
+                     border-right: 1px solid black;
+                     padding: 10PX 10PX 0;
+                     color: black;
+                     font-size: 16px;
+                     text-align: center;
+                     width: 30px;">
+                     {{ forloop.counter }}</td>
+                     <td style=" border-bottom: 1PX solid black;
+                     border-left: 1px solid black;
+                     border-right: 1px solid black;
+                     padding: 10PX 10PX 0;
+                     color: black;
+                     font-size: 16px;
+                     text-align: center;">{{ i.nombre }}</td>
+                    
+                     
+                 
+                 </tr>
+                 {% endfor %}
+             </tbody>
+             
+         </table>
+         <p style="margin-bottom: 30px; text-align: justify; font-size: 16px;">Para mayor constancia se firma la presente por los que en ella intervinieron.</p>
+          <table>
+                <tr class="sint">
+                    <td >
+                        <p style="text-align: center; ">_______________________________</p>
+                              <p  style="text-align: center; font-size: 16px;">Jurado No.1</p>
+                    </td>
+                    <td class="sin" >
+                        <p  style="text-align: center; ">_______________________________</p>
+                              <p style="text-align: center; font-size: 16px; margin-bottom: 60;" >Jurado No.2</p>
+                    </td>
+                    
+                </tr>
+                </table>
+                <table style="margin-top: 30px;">
+                <tr class="sint">
+                    <td class="sin"  style="height: 60px;">
+                        <p  style="text-align: center; margin-top: 60px;">_______________________________</p>
+                              <p  style="text-align: center; font-size: 16px; margin-bottom: 60px;">Jurado No.3</p>
+                    </td>
+                    <td class="sin"  style="height: 60px;">
+                        <p style="text-align: center;">_______________________________</p>
+                              <p style="text-align: center; font-size: 16px; margin-bottom: 60px; ">Coordinador de Evento</p>
+                    </td>
+                    
+                </tr>
+         </table>
+     </div>
+
+
+     
+</body>
+
+</html>

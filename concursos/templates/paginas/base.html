@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block titulo  %}  {% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'lib/bootstrap-5.2.0/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_progang.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_table.css' %}">
+  <link rel="stylesheet" href="{% static 'css/estilog.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+  <script src="{% static 'lib/bootstrap-5.2.0/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap-5.2.0/js/bootstrap.min.js' %}"></script>
+</head>
+<body> 
+ <header class="menu">
+    <a href="#" class="logo nav-link"></a>
+    
+    <nav><ul>
+      <li><a href="{% url 'inicio' %}">Inicio</a></li>
+      <li><a href="{% url 'participantes' %}">Inscripcion</a></li>
+      <li><a href="#">Primera ronda</a>
+          <ul><li><a href="{% url 'acordeonero' 1 %}">Acordeonero</a></li>
+              <li><a href="{% url 'piqueria1' 1 %}">Piqueria</a></li>
+              <li><a href="{% url 'piqueria_infantil1' 1 %}">Piqueria Infantil</a></li>
+              <li><a href="{% url 'inedita1' 1 %}">Cancion inedita</a></li></ul>
+      </li>
+      <li><a href="#">Segunda Ronda</a>
+        <ul><li><a href="{% url 'acordeonero' 2 %}">Acordeonero</a></li>
+          <li><a href="{% url 'piqueria1' 2 %}">Piqueria</a></li>
+          <li><a href="{% url 'piqueria_infantil1' 2 %}">Piqueria Infantil</a></li>
+          <li><a href="{% url 'inedita1' 2 %}">Cancion inedita</a></li></ul>
+      
+      </li>
+      <li><a href="#">Final</a>
+        <ul><li><a href="{% url 'acordeonero' 3 %}">Acordeonero</a></li>
+          <li><a href="{% url 'piqueria1' 3 %}">Piqueria</a></li>
+          <li><a href="{% url 'piqueria_infantil1' 3 %}">Piqueria Infantil</a></li>
+          <li><a href="{% url 'inedita1' 3 %}">Cancion inedita</a></li></ul>
+          </li>
+          <li><a href="{% url 'listados' %}">listados</a></li>
+  </ul></nav>
+
+  </header>
+ 
+    {% block contenido  %} 
+    
+    {% endblock %}
+     
+    
+</body>
+{% block extrajs %}
+  
+{% endblock extrajs %} 
+</html>

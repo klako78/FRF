@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contendor_login_register {
+  align-items: center;
+  width: 100%;
+  margin-top: 80px;    
+}
+.contendor_login_register form {
+  width: 30%;
+  padding: 10px 20px;
+  background: rgba(105, 105, 105,0.6);
+  border-radius: 20px;
+  margin: auto;
+}
+
+.contendor_salida {
+  width: 30%;
+  padding: 20px 20px;
+  background: rgba(105, 105, 105,0.6);
+  border-radius: 20px;
+  margin: auto;
+}
+.contendor_salida  h2  {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(13, 13, 43);
+}
+.contendor_login_register form h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
+.contendor_login_register form input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.contendor_login_register form textarea {
+  width: 100%;
+  height: 10%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+}
+.contendor_login_register form select {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+}
+.contendor_login_register form label{
+  color:white;
+  font-size: 16px;
+}
+.entrar {
+  width: 100%;
+  margin: auto;
+  padding: 10px 155px;
+  margin-top: 10px;
+  border: none;
+  font-size: 16px;
+  background: #46a2fd;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  }
+
+.form_login {
+  opacity: 1;
+  display: block;
+}
+
+

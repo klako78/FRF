@@ -1,0 +1,38 @@
+nav{
+    margin-left: 0%;
+}
+
+nav a{
+      text-decoration:none;
+      color:inherit;
+      font-size:16px;
+      }
+            
+nav li{
+      display:inline-block;
+      width:150px;
+      height:45px;
+      padding:10px 15px;
+      background-color:  rgba(13, 13, 43,0.5);
+      border:1px;
+      text-align:center;
+      color:yellow;
+      position:relative;
+     
+}
+            
+nav li:hover{
+      background-color: rgb(13, 13, 43);
+      color: yellow;
+      }
+            
+nav li>ul{
+      display:none;
+      }
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:45px;
+      left:-32px;
+}

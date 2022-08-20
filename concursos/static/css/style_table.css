@@ -1,0 +1,62 @@
+table{
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+       
+}
+
+th{
+    background-color:rgb(13, 13, 43);
+    color: white;
+    padding: 20px 20px;
+}
+
+
+
+td{
+    border-bottom: 1PX solid gray;
+    padding: 10PX 10PX 0;
+    color: yellow;
+    font-size: larger;
+  
+}
+
+.juez1 {
+    width: 50%; 
+}
+.juez2 {
+    width: 50%; 
+}
+.juez3 {
+    width: 50%; 
+}
+.total {
+    width: 50%; 
+}
+
+
+
+caption{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+tfoot td{
+    background-color: gray;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+img{
+    width: 250px;
+    height: 200px;
+}
+
+p{
+    margin-bottom: 10px;
+    
+}
+

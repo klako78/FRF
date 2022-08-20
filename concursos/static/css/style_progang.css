@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../img/fondo.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90px 20px 0;
+}
+
+.menu{
+    background-color:rgba(52,51,151,0.4);
+    width: 100%;
+    margin: auto;
+    height: 160px;
+    position: fixed;
+   top: 5px;
+   left: 0;
+  
+}
+
+.barranav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px;
+    line-height: 80px;
+    color: yellow;
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 16px;
+    margin: 0 0px;
+    line-height: 50px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link{
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover{
+    background-color: rgb(13, 13, 43);
+    color: yellow;
+}
+.contenido{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: rgba(105, 105, 105,0.5);
+    border-radius: 8px;
+}
+
+.contenido h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contenido h4{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.logo{
+    background-image: url(../img/banner_luis_enrique.jpg);
+    background-repeat: no-repeat;
+    width: 2500px;
+    height: 112px;
+    padding: 5px 5px;
+}
+
+.boton{
+    width: 100px;
+    padding: 3px 10px;
+    background-color:rgb(13, 13, 43);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+    
+        
+  }
+  .boton:hover{
+      background-color: yellow;
+      color: black;
+  }
+
+  
+  .txtbusqueda{
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;  
+
+  }
+
+  .buscar{
+    width: 100px;
+    padding: 10px 10px;
+    background-color:rgb(13, 13, 43);
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 6px;
+  }
+    .buscar1{
+        width: 100px;
+        padding: 10px 10px;
+        background-color:rgb(52,51, 151);
+        text-decoration: none;
+        color: yellow;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        border-radius: 6px;
+             
+  }
+
+  
+
+  .buscar:hover{
+      background-color: yellow;
+      color: black;
+  }

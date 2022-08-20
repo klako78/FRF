@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-5.2.0/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_progang.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_table.css' %}">
+  <link rel="stylesheet" href="{% static 'css/estilog.css' %}" />
+  <script src="{% static 'lib/bootstrap-5.2.0/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap-5.2.0/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <header class="menu">
+        <a href="#" class="logo nav-link"></a>
+    </header>
+    <div class="contenido">
+        <h2>Calificacion Jurados</h2>
+        <table class="table">
+            
+             <thead>
+                 <tr>
+                    
+                     <th>No</th>
+                     <th>NOMBRE</th>
+                     <th></th>
+                     <th></th>
+                     <th>TOTAL</th>
+                     
+     
+                 </tr>
+             </thead>
+             <tbody>
+                 {% for i in suscriptor %}
+                 <tr>
+                    
+                     <td>{{ forloop.counter }}</td>
+                     <td>{{ i.cancion }}</td>
+                     <td></td>
+                     <td></td>
+                     <td>{{ i.puntaje }}</td>
+                     
+                 
+                 </tr>
+                 {% endfor %}
+             </tbody>
+             <tfoot>
+                 <tr>
+                 <td colspan="8">Acordeonero</td>
+                </tr>
+             </tfoot>
+         </table>
+         
+     </div>
+</body>
+<script type="text/javascript">
+setTimeout('document.location.reload()',10000); 
+</script>
+</html>

@@ -1,0 +1,10 @@
+<div class="contendor_login_register">
+    <form  class="form_login" method="post" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        <h2>Participantes</h2>
+        {{ formulario }} 
+        <div class="col-12 help-text">{{ campo.errors }}</div>
+       <button class="entrar" type="submit">Guardar</button>
+      </form>
+</div>

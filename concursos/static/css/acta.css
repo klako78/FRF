@@ -1,0 +1,92 @@
+.menu{
+    width: 100%;
+    margin: auto;
+    height: 100px;
+   position: relative;
+   top: 5px;
+   left: 0;
+  
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+       
+}
+
+.con{
+    border-top: 1px solid black;
+    border-bottom: 1PX solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color:rgb(13, 13, 43);
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+
+
+.ralla{
+    border-bottom: 1PX solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10PX 10PX 0;
+    color: black;
+    font-size: larger;
+    text-align: center;
+
+   
+    
+    
+}
+
+caption{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+tfoot td{
+    background-color: gray;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    margin-bottom: 5px;
+    text-align: justify;
+    font-size: larger;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 5px;
+    color:black;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 10px;
+    color:black;
+}
+
+h5{
+    margin-top: 1000px;
+    text-align: justify;
+    margin-bottom: 10px;
+    color:black;
+}
+
+.centrado{
+    text-align: center;
+    
+}

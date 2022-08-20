@@ -1,0 +1,87 @@
+
+{% extends 'paginas/base.html' %}
+
+{% block titulo  %} Concursos {% endblock %}
+
+
+{% block contenido  %}
+
+
+<div class="contenido">
+   <h2>Calificacion Jurados</h2>
+   <form action="" method="get">
+    <input type="text" class="txtbusqueda" placeholder="Ingrese participante" name="busqueda">
+    <input type="submit" value="Buscar" class="buscar">
+    
+</form>
+   <table class="table">
+       
+        <thead>
+            <tr>
+               
+                <th>NOMBRE</th>
+                <th>JUEZ 1</th>
+                <th>JUEZ 2</th>
+                <th>JUEZ 3</th>
+                <th>TOTAL</th>
+                <th>ACCIONES</th>
+                <th>ACTA</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in suscriptor %}
+            <tr>
+               
+                <td style="width: 300px;">{{ i.cancion }}</td>
+                <td style="width: 250px;"><input tipe="text" name="juez1" id="juez1" class="juez1"></td>
+                <td style="width: 250px;"><input tipe="text" name="juez2" id="juez2" class="juez2"></td>
+                <td style="width: 250px;"><input tipe="text" name="juez3" id="juez3" class="juez3"></td>
+                <form action="{% url 'enviar' i.cedula  %}" method="post">
+                    {% csrf_token %}
+                <td style="width: 250px;"><input tipe="text" name="total" id="total" class="total" value="{{ i.puntaje }}"></td>
+                <td>
+                    <button class="boton" type="submit">Enviar</button> 
+                  
+                </td>
+            </form>
+            <td>
+                <form action="{% url 'generar_acta_acordeonero' i.ronda i.categoria %}" method="post">
+                    {% csrf_token %}
+                    <button class="boton" type="submit">Imprimir</button> 
+                </form>
+            </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+       
+    </table>
+    
+</div>
+
+ {% endblock %}
+ {% block extrajs %} 
+ <script type="text/javascript">
+    var $ = jQuery.noConflict();
+    $(document).ready(function() {
+        $(document).keyup(function (e) { 
+            if ($(".juez1").is(":focus") && (e.keyCode == 13)){
+            
+              $(".juez2").focus();
+                       
+        }else if($(".juez2").is(":focus") && (e.keyCode == 13)){
+              $(".juez3").focus();
+        }else if($(".juez3").is(":focus") && (e.keyCode == 13)){
+              num= (parseFloat($(".juez1").val())+parseFloat($(".juez2").val())+parseFloat($(".juez3").val()))/3
+              $(".total").val(round(num,2));
+        }
+    });
+        
+    });
+    function round(num) {
+    var m = Number((Math.abs(num) * 100).toPrecision(15));
+    return Math.round(m) / 100 * Math.sign(num);
+}
+
+ </script>
+ {% endblock extrajs %} 

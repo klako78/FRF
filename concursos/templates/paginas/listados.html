@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listados</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-5.2.0/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_progang.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style_table.css' %}">
+  <link rel="stylesheet" href="{% static 'css/estilog.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}" />
+  <script src="{% static 'lib/bootstrap-5.2.0/js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap-5.2.0/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <header class="menu">
+        <a href="#" class="logo nav-link"></a>
+        
+        <nav><ul>
+          <li><a href="{% url 'inicio' %}">Inicio</a></li>
+          <li><a href="#">Primera ronda</a>
+              <ul><li><a href="{% url 'listado_acordeonero' 1 %}">Acordeonero</a></li>
+                  <li><a href="{% url 'listado_piqueria' 1 %}">Piqueria</a></li>
+                  <li><a href="{% url 'listado_piqueria_infantil' 1 %}">Piqueria Infantil</a></li>
+                  <li><a href="{% url 'listado_cancion_inedita' 1 %}">Cancion inedita</a></li></ul>
+          </li>
+          <li><a href="#">Segunda Ronda</a>
+            <ul><li><a href="{% url 'listado_acordeonero' 2 %}">Acordeonero</a></li>
+                <li><a href="{% url 'listado_piqueria' 2 %}">Piqueria</a></li>
+                <li><a href="{% url 'listado_piqueria_infantil' 2 %}">Piqueria Infantil</a></li>
+                <li><a href="{% url 'listado_cancion_inedita' 2 %}">Cancion inedita</a></li></ul>
+          
+          </li>
+          <li><a href="#">Final</a>
+            <ul><li><a href="{% url 'listado_acordeonero' 3 %}">Acordeonero</a></li>
+                <li><a href="{% url 'listado_piqueria' 3 %}">Piqueria</a></li>
+                <li><a href="{% url 'listado_piqueria_infantil' 3 %}">Piqueria Infantil</a></li>
+                <li><a href="{% url 'listado_cancion_inedita' 3 %}">Cancion inedita</a></li></ul>
+              </li>
+          
+      </ul></nav>
+      </header>
+</body>
+</html>
