@@ -32,16 +32,16 @@
         <tbody>
             {% for i in suscriptor %}
             <tr>
-               
+                <form action="{% url 'enviar' i.cedula   %}" method="post">
+                    {% csrf_token %}
                 <td style="width: 300px;">{{ i.nombre }}</td>
                 <td style="width: 250px;"><input tipe="text" name="juez1" id="juez1" class="juez1"></td>
                 <td style="width: 250px;"><input tipe="text" name="juez2" id="juez2" class="juez2"></td>
                 <td style="width: 250px;"><input tipe="text" name="juez3" id="juez3" class="juez3"></td>
-                <form action="{% url 'enviar' i.cedula   %}" method="post">
-                    {% csrf_token %}
+                
                 <td style="width: 250px;"><input tipe="text" name="total" id="total" class="total" value="{{ i.puntaje }}"></td>
                 <td>
-                    <button class="boton" type="submit">Enviar</button> 
+                    <button class="boton" id="enviar" name="enviar" type="submit" disabled>Enviar</button>
                   
                 </td>
             </form>
@@ -74,6 +74,7 @@
         }else if($(".juez3").is(":focus") && (e.keyCode == 13)){
               num= parseInt($(".juez1").val())+parseInt($(".juez2").val())+parseInt($(".juez3").val());
               $(".total").val(num);
+              $('#enviar').attr('disabled', false);
         }
     });
         

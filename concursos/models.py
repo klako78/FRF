@@ -37,7 +37,10 @@ class concursante(models.Model):
     cancion=models.CharField(max_length=100,verbose_name="Nombre de la cancion si aplica" ,null=True,blank=True)
     categoria=models.CharField(verbose_name='Categoria',choices=categorias,max_length=100)
     ronda=models.CharField(max_length=100,verbose_name="Ronda" ,default="1")
-    puntaje=models.DecimalField(max_digits = 5, decimal_places = 2,verbose_name="Puntaje",default="0.0")
+    juez1=models.DecimalField(max_digits = 5, decimal_places = 2,verbose_name="juez1",default="0.0")
+    juez2=models.DecimalField(max_digits = 5, decimal_places = 2,verbose_name="juez2",default="0.0")
+    juez3=models.DecimalField(max_digits = 5, decimal_places = 2,verbose_name="juez3",default="0.0")
+    total=models.DecimalField(max_digits = 5, decimal_places = 2,verbose_name="total",default="0.0")
     
         
     def __str__(self):

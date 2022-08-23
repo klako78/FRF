@@ -83,20 +83,27 @@ pass
 
 def enviar(request,id):
     cedula=int(id)
+    juez1=float(request.POST['juez1'])
+    juez2=float(request.POST['juez2'])
+    juez3=float(request.POST['juez3'])
     total=float(request.POST['total'])
     try:
-        ron=1 
-        concursante.objects.filter(cedula=cedula).update(puntaje=total) 
+        ron=1
+        concursante.objects.filter(cedula=cedula).update(juez1=juez1)
+        concursante.objects.filter(cedula=cedula).update(juez2=juez2)
+        concursante.objects.filter(cedula=cedula).update(juez3=juez3)  
+        concursante.objects.filter(cedula=cedula).update(total=total) 
         return redirect('acordeonero',{ 'id':ron })
     except Exception as e:
           return HttpResponse(e)
+    
 pass
 
 def listado_acordeonero(request,id):
     busqueda='ACORDEONERO'
     suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=id)).order_by('-puntaje')
+        Q(ronda=id)).order_by('-total')
 
         
     
@@ -107,7 +114,7 @@ def listado_piqueria(request,id):
     busqueda='PIQUERIA'
     suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=id)).order_by('-puntaje')
+        Q(ronda=id)).order_by('-total')
 
         
     
@@ -118,7 +125,7 @@ def listado_piqueria_infantil(request,id):
     busqueda='PIQUERIA INFANTIL'
     suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=id)).order_by('-puntaje')
+        Q(ronda=id)).order_by('-total')
 
         
     
@@ -129,7 +136,7 @@ def listado_cancion_inedita(request,id):
     busqueda='CANCION INEDITA'
     suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=id)).order_by('-puntaje')
+        Q(ronda=id)).order_by('-total')
 
         
     
@@ -141,7 +148,7 @@ def acta(request,id):
     busqueda='ACORDEONERO'
     suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=id)).order_by('-puntaje')
+        Q(ronda=id)).order_by('-total')
 
         
     
@@ -158,7 +165,7 @@ def generar_acta_acordeonero(request,ron,cat):
         fase=ron
         suscriptor=concursante.objects.filter(
             Q(categoria=busqueda)&
-        Q(ronda=fase)).order_by('-puntaje')
+        Q(ronda=fase)).order_by('-total')
         limite=suscriptor.count()/2
         pocicion=1
         for i in suscriptor:
@@ -169,7 +176,7 @@ def generar_acta_acordeonero(request,ron,cat):
             pocicion+=1
         acta=concursante.objects.filter(
             Q(categoria=busqueda)&
-            Q(ronda='2')).order_by('-puntaje')
+            Q(ronda='2')).order_by('-total')
 
         data={
             'suscriptor': acta
